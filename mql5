@@ -1,0 +1,106 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                       Havana EA                  |
+//|                                    forexroboteasy.com            |
+//|                                 Forex Robot Easy Team            |
+//+------------------------------------------------------------------+
+
+// Entry Models
+enum EntryModel
+{
+    MODEL_A,
+    MODEL_B,
+    MODEL_C
+};
+
+// Trade Management Types
+enum TradeManagementType
+{
+    TYPE_X,
+    TYPE_Y,
+    TYPE_Z
+};
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Initialize Entry Model
+    EntryModel entryModel = MODEL_A;
+
+    // Initialize Trade Management Type
+    TradeManagementType tradeManagementType = TYPE_X;
+
+    // Print the chosen Entry Model and Trade Management Type
+    Print('Chosen Entry Model: ', entryModel);
+    Print('Chosen Trade Management Type: ', tradeManagementType);
+
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Perform necessary deinitialization tasks here
+
+    // Print a farewell message
+    Print('Havana EA has been deinitialized. Goodbye!');
+}
+
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Scan the Forex market for entry opportunities
+    // based on the chosen Entry Model
+    switch(entryModel)
+    {
+        case MODEL_A:
+            // Implement logic for Entry Model A
+            // ...
+            break;
+        case MODEL_B:
+            // Implement logic for Entry Model B
+            // ...
+            break;
+        case MODEL_C:
+            // Implement logic for Entry Model C
+            // ...
+            break;
+        default:
+            Print('Invalid entry model chosen!');
+            return;
+    }
+
+    // Implement advanced Trailing Stop Loss System
+    // to manage risk and maximize profits
+    switch(tradeManagementType)
+    {
+        case TYPE_X:
+            // Implement logic for Trade Management Type X
+            // ...
+            break;
+        case TYPE_Y:
+            // Implement logic for Trade Management Type Y
+            // ...
+            break;
+        case TYPE_Z:
+            // Implement logic for Trade Management Type Z
+            // ...
+            break;
+        default:
+            Print('Invalid trade management type chosen!');
+            return;
+    }
+
+    // Implement necessary trading functions
+
+    // ...
+
+    // Implement the logical conclusion of the code
+    Print('Havana EA has completed its execution.');
+}
